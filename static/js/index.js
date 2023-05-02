@@ -14,5 +14,13 @@ form.addEventListener('submit', (event) => {
   li.textContent = task;
   list.appendChild(li);
 
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = 'Удалить';
+  li.appendChild(deleteButton);
+
+  deleteButton.addEventListener('click', () => {
+    li.remove();
+  });
+
   input.value = '';
 });
